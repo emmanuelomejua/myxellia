@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react'
 
-const Navbar = () => {
+const Topbar = () => {
   return (
     <div className='h-[82px] bg-[#191919] flex'>
         <div className="flex items-center justify-between max-w-[1200px] w-full mx-auto ">
@@ -20,5 +20,5 @@ const Navbar = () => {
   )
 }
 
-export default Navbar;
+export default Topbar;
 
