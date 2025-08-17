@@ -3,8 +3,8 @@ import React from 'react'
 
 const Topbar = () => {
   return (
-    <div className='h-[82px] bg-[#191919] flex'>
-        <div className="flex items-center justify-between max-w-[1200px] w-full mx-auto ">
+    <div className='h-[82px] mainBlack flex'>
+        <div className="flex items-center justify-between max-w-[1284px] w-full mx-auto ">
         <Image src='/icons/logo.svg' alt='Logo' height={50} width={70}/>
 
         <div className="flex items-center gap-4">

@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <div className='bg-[#FFFFFF] h-[67px] border-b-1 border-[#F4F4F5]'>
-        <div className="flex items-center justify-between gap-1.5 max-w-[1200px] w-full h-full mx-auto">
+        <div className="flex items-center justify-between gap-1.5 max-w-[1284px] w-full h-full mx-auto">
         <div className="flex items-center gap-2">
             {listMenu.map((menu) => {
             const isActive = active === menu.text;

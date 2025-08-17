@@ -18,6 +18,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.mainBlack {
-  color: #191919
+
+@layer utilities {
+  .mainBlack {
+    background-color: #191919;
+  }
+
+  .textColor{
+    color: #191919;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+  }
 }
+
