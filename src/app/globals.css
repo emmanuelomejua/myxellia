@@ -2,7 +2,6 @@
 
 
 body {
-  /* overflow-y: scroll;  */
   scrollbar-width: none;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -28,6 +27,14 @@ body::-webkit-scrollbar {
     border-radius: 16px;
     border-width: 1px;
     border-color: #E4E4E4;
+  }
+
+  .slider{
+    width: 418px;
+    border-radius: 12px;
+    height: 100%;
+    border: 1px solid #E4E4E4;
+    position: relative;
   }
 }
 
