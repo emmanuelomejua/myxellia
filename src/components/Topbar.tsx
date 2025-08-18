@@ -1,8 +1,14 @@
-import React from 'react'
+'use client';
+
+import React, { useState } from 'react'
 import Images from './primitives/Images';
 import Link from 'next/link';
 
 const Topbar = () => {
+
+  const [openCal, setOpenCal] = useState(false)
+
+
   return (
     <div className='h-[82px] mainBlack flex'>
         <div className="flex items-center justify-between max-w-[1284px] w-full mx-auto ">
