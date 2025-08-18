@@ -1,6 +1,6 @@
 import TextField from "@/components/primitives/TextField";
-import Listing from "@/modules/Listing";
-import SaleOverview from "@/modules/SaleOverview";
+import Listing from "@/sections/Listing";
+import SaleOverview from "@/sections/SaleOverview";
 import Image from "next/image";
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
       <main className="flex flex-col max-w-[1284px] w-full mx-auto py-4 gap-4">
         <TextField text="Welcome, Ahmed" className="textColor" />
 
-        <div className="flex gap-[20px]">
+        <div className="flex gap-[20px] h-[324px]">
           <SaleOverview/>
           <Listing/>
         </div>

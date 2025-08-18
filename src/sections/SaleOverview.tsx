@@ -3,7 +3,7 @@
 import TextField from '@/components/primitives/TextField';
 import Typography from '@/components/primitives/Typography';
 import React, { useState } from 'react'
-import Widget from './Widget';
+import Widget from '../modules/Widget';
 
 const SaleOverview = () => {
 
@@ -13,14 +13,14 @@ const SaleOverview = () => {
 
   return (
     <div className='border-1 border-[#E4E4E4] bg-[#FFFFFF] rounded-[16px] flex flex-col w-[857px]'>
-      <div className="flex flex-col gap-4 w-full border-b-1 border-[#E4E4E4] py-[20px]">
+      <div className="flex flex-col gap-4 w-full border-b-1 border-[#E4E4E4] py-[14px]">
         <div className="flex justify-between px-[20px]">
             <div className="flex flex-col gap-[20px]">
                 <TextField className='textColor' text='Sales Overview' />
                 <Typography text='Showing overview Jan 2022 - Sep 2022' className='text-[#606060] text-[12px] font-[400] leading-[100%]' />
             </div>
 
-             <div className="p-4 border-1 border-[#D6D6D6] rounded-[72px] w-[177px] flex items-center justify-center">
+             <div className="p-4 border-1 border-[#D6D6D6] rounded-[72px] w-[177px] h-[46px] flex items-center justify-center">
                 <Typography text='View Transactions' className='text-[#191919] text-[12px] font-[500] leading-[100%]' />
              </div>
         </div>
@@ -36,12 +36,12 @@ const SaleOverview = () => {
         </div>
       </div>
 
-        <div className="p-[20px] flex">
+        <div className="px-[20px] py-[14px] flex">
           <div className="flex-1">
             Chart
           </div>
 
-          <div className="flex-1 flex flex-wrap gap-2 justify-between">
+          <div className="flex-1 flex items-center flex-wrap justify-between gap-2 ml-8">
             <Widget amt='120,000,000.00' amtColor='text-[#4545FE]' percent={2.5} percentColor='text-[#4545FE]' icon='/chart/green.svg' desc='Total Inflow'/>
             <Widget amt='50,000,000.00' amtColor='text-[#12B76A]' percent={2.5} percentColor='text-[#12B76A]' icon='/chart/green.svg' desc='MRR'/>
             <Widget amt='200,000,000.00' amtColor='text-[#14B8A6]' percent={0.5} percentColor='text-[#14B8A6]' icon='/chart/blue.svg' desc='Commission Revenue'/>
