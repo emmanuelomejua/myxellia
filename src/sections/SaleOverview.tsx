@@ -4,6 +4,7 @@ import TextField from '@/components/primitives/TextField';
 import Typography from '@/components/primitives/Typography';
 import React, { useState } from 'react'
 import Widget from '../modules/Widget';
+import BarchartComp from '@/modules/barchart/BarChart';
 
 const SaleOverview = () => {
 
@@ -38,7 +39,7 @@ const SaleOverview = () => {
 
         <div className="px-[20px] py-[14px] flex">
           <div className="flex-1">
-            Chart
+            <BarchartComp />
           </div>
 
           <div className="flex-1 flex items-center flex-wrap justify-between gap-2 ml-8">
