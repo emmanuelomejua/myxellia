@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Typography = ({className, text}: {className: string, text: string}) => {
+const Typography = ({className, text, onClick}: {className: string, text: string, onClick?: () => void}) => {
   return (
-   <span className={className}>{text}</span>
+   <span className={className} onClick={onClick}>{text}</span>
   )
 }
 

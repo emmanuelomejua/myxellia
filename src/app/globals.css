@@ -30,5 +30,11 @@ body {
     font-size: 20px;
     line-height: 100%;
   }
+
+  .borderStyle {
+    border-radius: 16px;
+    border-width: 1px;
+    border-color: #E4E4E4;
+  }
 }
 
