@@ -1,5 +1,6 @@
 import React from 'react'
 import Images from './primitives/Images';
+import Link from 'next/link';
 
 const Topbar = () => {
   return (
@@ -9,7 +10,9 @@ const Topbar = () => {
 
         <div className="flex items-center gap-4">
             <Images src='/icons/not.svg' alt='Logo' h={32} w={32}/>
-            <Images src='/icons/budgeting.svg' alt='Logo' h={32} w={32} className='cursor-pointer'/>
+            <Link href='/budgeting/create'>
+              <Images src='/icons/budgeting.svg' alt='Logo' h={32} w={32} className='cursor-pointer'/>
+            </Link>
             <Images src='/icons/calendar.svg' alt='Logo' h={32} w={32} className='cursor-pointer'/>
             <Images src='/icons/message-notif.svg' alt='Logo' h={32} w={32}/>
 

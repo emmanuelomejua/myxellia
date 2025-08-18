@@ -25,10 +25,8 @@ const Card = ({data}: cardProp) => {
                 text={data.desc} 
                 className='text-[#606060] text-[12px] font-[400] leading-[100%] tracking-[0%]' />
         </div>
-
-        <button className='w-full '>Create Budget</button>
-
     </div>
+
   )
 }
 
