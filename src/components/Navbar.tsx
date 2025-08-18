@@ -2,13 +2,14 @@
 
 import Image from 'next/image';
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 const listMenu = [
-    {icon: '/general/home.svg', text: 'Dashboard'},
-    {icon: '/general/toolbox.svg', text: 'Listings'},
-    {icon: '/general/user.svg', text: 'Users'},
-    {icon: '/general/article.svg', text: 'Request'},
-    {icon: '/general/scroll.svg', text: 'Applications'},
+    {icon: '/general/home.svg', text: 'Dashboard', url: '/'},
+    {icon: '/general/toolbox.svg', text: 'Listings', url: '#'},
+    {icon: '/general/user.svg', text: 'Users', url: '#'},
+    {icon: '/general/article.svg', text: 'Request', url: '#'},
+    {icon: '/general/scroll.svg', text: 'Applications', url: '#'},
 ]
 
 const Navbar = () => {
@@ -22,7 +23,8 @@ const Navbar = () => {
             {listMenu.map((menu) => {
             const isActive = active === menu.text;
             return (
-                <button
+                <Link
+                href={menu.url}
                 key={menu.text}
                 onClick={() => setActive(menu.text)}
                 className={`flex items-center gap-2 w-[170px] h-[38px] rounded-lg px-4 py-2 transition-colors
@@ -31,7 +33,7 @@ const Navbar = () => {
                 >
                 <Image src={menu.icon} alt={menu.text} width={20} height={20} />
                 <span className="text-sm">{menu.text}</span>
-                </button>
+                </Link>
             );
             })}
         </div>
