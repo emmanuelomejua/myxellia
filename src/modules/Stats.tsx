@@ -26,8 +26,8 @@ const Stats = ({stats, icon, title}: statType) => {
         </div>
 
         <div className="flex justify-between p-[16px] ">
-            {stats.map((stat, index) => (
-                <StatsCard prop={stat} key={index}/>
+            {stats.map((stat) => (
+                <StatsCard prop={stat} key={stat.stat}/>
             ))}
         </div>
     </div>

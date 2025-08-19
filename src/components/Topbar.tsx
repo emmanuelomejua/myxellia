@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import Images from './primitives/Images';
 import ModalComp from './modals/Modal';
 import CreateBuget from '@/modules/budget/CreateBudget';
+import MyCalendar from '@/modules/calendar/Calendar';
 
 
 
@@ -33,6 +34,12 @@ const Topbar = () => {
               <CreateBuget/>
         </ModalComp>
         }
+
+        {openCal && 
+        <div className="absolute top-1">
+          <MyCalendar/>
+        </div>}
+      
     </div>
   )
 }
