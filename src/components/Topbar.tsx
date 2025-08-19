@@ -2,11 +2,15 @@
 
 import React, { useState } from 'react'
 import Images from './primitives/Images';
-import Link from 'next/link';
+import ModalComp from './modals/Modal';
+import CreateBuget from '@/modules/budget/CreateBudget';
+
+
 
 const Topbar = () => {
 
-  const [openCal, setOpenCal] = useState(false)
+  const [openCal, setOpenCal] = useState(false);
+  const [openBudgetModal, setOpenBudgetModal] = useState(false);
 
 
   return (
@@ -16,15 +20,19 @@ const Topbar = () => {
 
         <div className="flex items-center gap-4">
             <Images src='/icons/not.svg' alt='Logo' h={32} w={32}/>
-            <Link href='/budgeting/create'>
-              <Images src='/icons/budgeting.svg' alt='Logo' h={32} w={32} className='cursor-pointer'/>
-            </Link>
-            <Images src='/icons/calendar.svg' alt='Logo' h={32} w={32} className='cursor-pointer'/>
+            <Images src='/icons/budgeting.svg' alt='Logo' onClick={() => setOpenBudgetModal(true)} h={32} w={32} className='cursor-pointer'/>
+            <Images src='/icons/calendar.svg' alt='Logo' onClick={() => setOpenCal(true)} h={32} w={32} className='cursor-pointer'/>
             <Images src='/icons/message-notif.svg' alt='Logo' h={32} w={32}/>
 
             <Images src='/icons/profile.svg' alt='Logo' h={40} w={40} className='rounded-full object-cover cursor-pointer'/>
         </div>
         </div>
+
+        {openBudgetModal &&
+          <ModalComp open={openBudgetModal} onClose={() => setOpenBudgetModal(false)}>
+              <CreateBuget/>
+        </ModalComp>
+        }
     </div>
   )
 }
